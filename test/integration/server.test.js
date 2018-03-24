@@ -15,6 +15,10 @@ before((done) => {
     })
 })
 
+after(() => {
+  process.exit(0)
+})
+
 describe('sms-management-api', () => {
   it('POST /api/v1/contacts should create a new contact.', (done) => {
     request

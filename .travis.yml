@@ -1,7 +1,6 @@
-dist: trusty
 language: node_js
 node_js:
-  - stable
+  - "8.5.0"
 
 before_install:
   - export CHROME_BIN=/usr/bin/google-chrome
@@ -16,9 +15,6 @@ before_script:
   - psql -c 'drop database if exists sms_api_test;' -U postgres
   - psql -c 'create database sms_api_test;' -U postgres
   - NODE_ENV=test npm run migrate
-
-script:
-  - npm test
 
 after_success:
   - npm run coveralls

@@ -4,11 +4,12 @@
   "description": "A simple SMS Management API as part of progression process for Andela LMS",
   "main": "index.js",
   "scripts": {
-    "coverage": "NODE_ENV=test rm -rf coverage/ && istanbul cover _mocha -- -R spec test/**/*.test.js",
+    "coverage": "NODE_ENV=test && rm -rf coverage/ && istanbul cover _mocha -- -R spec ./test/**/*.test.js",
     "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls",
     "start-dev": "nodemon index.js",
     "start": "node index.js",
-    "test": "NODE_ENV=test mocha ./test/**/*.test.js"
+    "migrate": "sequelize db:migrate",
+    "test": "NODE_ENV=test && mocha './test/**/*.test.js'"
   },
   "repository": {
     "type": "git",
