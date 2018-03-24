@@ -35,22 +35,22 @@ const mockContact = {
 
 const mockMessage = {
   noStatus: {
-    message: faker.lorem.text()
+    content: faker.lorem.text()
   },
   read1: {
-    message: faker.lorem.text(),
+    content: faker.lorem.text(),
     status: modelConstant.SMS_STATUS_READ,
   },
   read2: {
-    message: faker.lorem.text(),
+    content: faker.lorem.text(),
     status: modelConstant.SMS_STATUS_READ,
   },
   unread1: {
-    message: faker.lorem.text(),
+    content: faker.lorem.text(),
     status: modelConstant.SMS_STATUS_UNREAD,
   },
   unread2: {
-    message: faker.lorem.text(),
+    content: faker.lorem.text(),
     status: modelConstant.SMS_STATUS_UNREAD,
   },
   noMsgContent: {}
