@@ -13,10 +13,13 @@ SMS Management API is an api for managing Contacts and Messages. It allows the f
 To be able to run this application locally, the following are required:
 - [Node.JS]
 - [Node Package Manager (npm)]
+- Postgres DB service
 
 ### How To Use
 This can be easily installed locally through these steps:
 - Clone the repository locally
+- Create a .env file in the root repository with the necessary environment variables as in the [.env.example](/.env.example) file
+- Create the Postgres databases specified in the .env DB URLs
 - Run `npm install` to install dependent Node packages
 - Run `npm start` to start the server
 
